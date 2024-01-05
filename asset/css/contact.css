@@ -85,6 +85,10 @@
     margin-bottom: 30px;
     width: 400px;
 }
+.input-form > select {
+    border: 1px solid black;
+    
+}
 .button-contact {
     margin-left: 350px; 
     font-size: 14px;
