@@ -1,4 +1,4 @@
-function submitForm() {
+function submitForm(event) {
     event.preventDefault()
 
         const name = document.getElementById("name").value
@@ -8,20 +8,26 @@ function submitForm() {
         const yourMessage = document.getElementById("yourMessage").value
 
         
-        if (name="") {
+        if (name=="") {
             return alert("Name must be filled")
-        } else if ("email") {
+        } else if (email=="") {
             return alert("Email must be filled")
-        } else if ("phoneNumber") {
+        } else if (phoneNumber=="") {
             return alert("Phone Number must be filled")
-        } else if ("subject") {
+        } else if (subject=="") {
             return alert("Subject must be filled")
-        } else if ("yourMessage") {
+        } else if (yourMessage=="") {
             return alert("Message must be filled")
         }
         
         
         console.log(name, email, phoneNumber,subject, yourMessage)
 
+        let a = document.createElement("a")
+        const url = "https://mail.google.com/mail/?view=cm&fs=1&to="+email
+
+        a.href = `mailto:${encodeURI(email)}?subject=${encodeURI(subject)}&body=${encodeURIComponent(yourMessage)}`
+        console.log(a)
+        a.click()
 
 }
