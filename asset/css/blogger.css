@@ -1,0 +1,52 @@
+
+.container-blogger {
+    background-color: lightgray ;
+    height: auto;
+    
+}
+.text-blogger {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 50px;
+    
+}
+.name-blogger {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+.data-blogger {
+    display: flex;
+    margin-left: 50px;
+    gap: 50px;
+}
+
+.information-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.time {
+    display: flex;
+    gap: 10px;
+}
+.image-and-text {
+    display: flex;
+    gap: 10px;
+}
+.icon {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 10px;
+}
+.text-lorem {
+    padding-left: 50px;
+    text-align: justify;
+    width: 900px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}

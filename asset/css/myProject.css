@@ -71,10 +71,10 @@
     font-size: 20px;
     font-weight: 700;
 }
-.form-project {
+.form-blogger {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     ;
     
 }
@@ -89,14 +89,22 @@
     border-radius: 5px;
     padding: 9px 12px;
     background-color: white;
+    box-shadow:  0px 0px 4px 0px;
 }
 .date {
     display: flex;
     gap: 10px;
+    
 }
 .box {
     display: flex;
     gap: 10px;
+    font-size: 20px;
+}
+.box-input {
+    border: 1px solid white;
+    border-color: white;
+
 }
 .position-box {
     display: grid;
@@ -104,17 +112,84 @@
     
 }
 .button-myproject {
-    margin-left: 840px;
+    margin-left: 400px;
     margin-top: 20px;
 }
 .button {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
     color: black;
     padding: 5px 20px;
     background-color: black;
     color: white;
     cursor: pointer;
+}
 
+/* content */
+
+.container-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.container-content > h1 {
+    text-align: center;
+    font-size: 40px;
+}
+.list-blogger {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 50px;
+    margin: 50px;
+}
+.post-card-blog {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px;
+    padding: 20px;
+    
+}
+.image-blog {
+    border-radius: 10px;
+}
+
+.text-content > p{
+    margin-top: 20px;
+    font-size: 16px;
+}
+.icon-content {
+    display: flex;
+    gap: 20px;
+
+}
+.icon-content > i {
+    font-size: 20px;
+}
+
+.button-content {
+    display: flex;
+    gap: 10px;
+}
+.edit-content {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 55px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+.delete-content {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 50px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
 }

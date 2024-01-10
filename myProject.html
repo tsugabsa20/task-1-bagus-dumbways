@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
         <link rel="stylesheet" href="asset/css/myProject.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <title>Form and Navbar</title>
     </head>
     <body>
@@ -27,44 +26,73 @@
         <div class="container-myProject">
             <div class="bg-project">
                 <p>ADD MY PROJECT</p>
-                <div class="form-project">
-                    <label class="form" for="name">Project Name</label>
-                    <input class="input-form-project" type="text"/>
-                    <p class="date">
-                        <label class="form" for="date">Start Date</label>
-                        <input class="input-form-project" type="date"/>
-                        <label class="form" for="date">End Date</label>
-                        <input class="input-form-project" type="date"/>
-                    </p>
-                    <label class="form" for="description">Description</label>
-                    <input class="input-form-project" type="textarea"/>
-                    <label class="form"  for="Tecnologies">Tecnologies</label>
-                    <div class="position-box">
-                        <p class="box">
-                            <input class="box-input" type="checkbox" placeholder="NodeJs"/>
-                            <label class="box-1" >Node Js</label>
+                <div class="form-project" >
+                    <form class="form-blogger" onsubmit="addBlogger(event)">
+                        <label class="form" for="name">Project Name</label>
+                        <input class="input-form-project" id="input-name"type="text"/>
+                        <p class="date">
+                            <label class="form" for="date">Start Date</label>
+                            <input class="input-form-project" id="input-date-start" type="date"/>
+                            <label class="form" for="date">End Date</label>
+                            <input class="input-form-project" id="input-date-end" type="date"/>
                         </p>
-                        <p class="box">
-                            <input class="box-input" type="checkbox" placeholder="NodeJs"/>
-                            <label class="box-1" >Next Js</label>
-                        </p>
-                        <p class="box">
-                            <input class="box-input" type="checkbox" placeholder="NodeJs"/>
-                            <label class="box-1" >React Js</label>
-                        </p>
-                        <p class="box">
-                            <input class="box-input" type="checkbox" placeholder="NodeJs"/>
-                            <label class="box-1" >TypeScript</label>
-                        </p>
+                        <label class="form" for="description">Description</label>
+                        <input class="input-form-project" id="input-description" type="textarea"/>
+                        <label class="form"  for="Tecnologies">Tecnologies</label>
+                        <div class="position-box">
+                            <p class="box">
+                                <input class="box-input" type="checkbox" id="nodejs" placeholder="NodeJs"/>
+                                <label class="box-1" >Node Js</label>
+                            </p>
+                            <p class="box">
+                                <input class="box-input" type="checkbox" id="nextjs"placeholder="NodeJs"/>
+                                <label class="box-1" >Next Js</label>
+                            </p>
+                            <p class="box">
+                                <input class="box-input" type="checkbox" id="reactjs" placeholder="NodeJs"/>
+                                <label class="box-1" >React Js</label>
+                            </p>
+                            <p class="box">
+                                <input class="box-input" type="checkbox" id="typescript" placeholder="NodeJs"/>
+                                <label class="box-1" >TypeScript</label>
+                            </p>
+                        </div>
+                        <label class="form" for="image">Upload Image</label>
+                        <input class="input-form-project" id="input-image" type="file"/>
                     </div>
-                    <label class="form" for="image">Upload Image</label>
-                    <input class="input-form-project" type="file"/>
-                </div>
-            </div>
-            
-            <div class="button-myproject">
-                <button class="button">Submit</button>
+                    <div class="button-myproject">
+                        <button class="button" >Submit</button>
+                    </div>
+                    </form>
+            </div> 
+        </div>
+        
+        <hr class="line">
+        <div class="container-content">
+            <h1>MY PROJECT</h1>
+        <div id="content" class="list-blogger">
+                <!-- <div class="content-blogger">
+                    <div class="post-card-blog">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJnDneHEkgdhzUHF5OxnQ8qGcY1dk95y8wkg&usqp=CAU" class="image-blog"/>
+                        <div class="text-content">
+                            <h3>Dumbways Mobile App - 2021</h3>
+                            <h5>durasi : 3 bulan</h5>
+                            <p>App that used for dumbways student, it was deployed and can downloaded on playstore.
+                                Happy download
+                        </div>
+                        <div class="icon-content">
+                            <i class="fa-brands fa-google-play"></i>
+                            <i class="fa-brands fa-android"></i>                   
+                            <i class="fa-brands fa-java"></i> 
+                        </div>
+                        <div class="button-content">
+                            <button class="edit-content">Edit</button>
+                            <button class="delete-content">Delete</button>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
+        <script src="asset/js/blog.js"></script>
     </body>
 </html>

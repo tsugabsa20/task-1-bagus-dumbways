@@ -24,9 +24,8 @@ function submitForm(event) {
         console.log(name, email, phoneNumber,subject, yourMessage)
 
         let a = document.createElement("a")
-        const url = "https://mail.google.com/mail/?view=cm&fs=1&to="+email
-
-        a.href = `mailto:${encodeURI(email)}?subject=${encodeURI(subject)}&body=${encodeURIComponent(yourMessage)}`
+        
+        a.href = `mailto:${encodeURI(email)}?subject=${encodeURI(subject)}&body=+\${encodeURIComponent(yourMessage)}`
         console.log(a)
         a.click()
 
