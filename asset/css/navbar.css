@@ -62,7 +62,7 @@
 }
 
 .hamberger-list {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 20px;
     align-items: center;
@@ -89,9 +89,16 @@
         display: block;
     }
     .hidden {
-        display: none
+        display: flex
     }
-   
+    /* .hamberger-list {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        background-color: white;
+        padding: 10px;
+    */
 
 };
 

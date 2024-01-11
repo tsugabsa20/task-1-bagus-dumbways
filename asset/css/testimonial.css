@@ -29,3 +29,34 @@
     padding: 5px 10px;
     cursor: pointer;
 }
+
+.testimoni {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 50px;
+}
+.testimonial {
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0;
+    width: 210px;
+    height: 350px;
+    padding: 30px;
+}
+.image-testimonial {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.suggestion {
+    display: flex;
+    margin-bottom: 10px;
+}
+.author {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+}
