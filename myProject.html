@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
         <link rel="stylesheet" href="asset/css/navbar.css">
         <link rel="stylesheet" href="asset/css/myProject.css">
@@ -16,7 +16,8 @@
                     </div>
                     <div class="navbar-text">
                         <a href="index.html">Home</a>
-                        <p>My Project</p>
+                        <a href="myProject.html">My Project</a>
+                        <a href="testimonial.html">Testimonial</a>
                     </div>
                 </div>
                 <div class="content-2">
@@ -26,19 +27,23 @@
         </div>
         <div class="container-myProject">
             <div class="bg-project">
-                <p>ADD MY PROJECT</p>
+                <p style="margin-bottom: 20px;">ADD MY PROJECT</p>
                 <div class="form-project" >
                     <form class="form-blogger" onsubmit="addBlogger(event)">
                         <label class="form" for="name">Project Name</label>
                         <input class="input-form-project" id="input-name"type="text"/>
-                        <p class="date">
-                            <label class="form" for="date">Start Date</label>
-                            <input class="input-form-project" id="input-date-start" type="date"/>
-                            <label class="form" for="date">End Date</label>
-                            <input class="input-form-project" id="input-date-end" type="date"/>
-                        </p>
+                        <div class="date">
+                            <div class="date-box">
+                                <label class="form" for="date">Start Date</label>
+                                <input class="input-form-project" id="input-date-start" type="date"/>
+                            </div>
+                            <div class="date-box">
+                                <label class="form" for="date">End Date</label>
+                                <input class="input-form-project" id="input-date-end" type="date"/>
+                            </div>    
+                        </div>
                         <label class="form" for="description">Description</label>
-                        <input class="input-form-project" id="input-description" type="textarea"/>
+                        <textarea class="input-form-project" id="input-description" cols="30" rows="10" ></textarea>
                         <label class="form"  for="Tecnologies">Tecnologies</label>
                         <div class="position-box">
                             <p class="box">
@@ -46,25 +51,25 @@
                                 <label class="box-1" >Node Js</label>
                             </p>
                             <p class="box">
-                                <input class="box-input" type="checkbox" id="nextjs"placeholder="NodeJs"/>
-                                <label class="box-1" >Next Js</label>
+                                <input class="box-input" type="checkbox" id="python"placeholder="NodeJs"/>
+                                <label class="box-1" >Python</label>
                             </p>
                             <p class="box">
                                 <input class="box-input" type="checkbox" id="reactjs" placeholder="NodeJs"/>
                                 <label class="box-1" >React Js</label>
                             </p>
                             <p class="box">
-                                <input class="box-input" type="checkbox" id="typescript" placeholder="NodeJs"/>
-                                <label class="box-1" >TypeScript</label>
+                                <input class="box-input" type="checkbox" id="javascript" placeholder="NodeJs"/>
+                                <label class="box-1" >JavaScript</label>
                             </p>
                         </div>
                         <label class="form" for="image">Upload Image</label>
                         <input class="input-form-project" id="input-image" type="file"/>
-                    </div>
-                    <div class="button-myproject">
-                        <button class="button" >Submit</button>
-                    </div>
+                        <div class="button-myproject">
+                            <button class="button" >Submit</button>
+                        </div>
                     </form>
+                </div>
             </div> 
         </div>
         

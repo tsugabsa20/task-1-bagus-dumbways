@@ -1,36 +1,51 @@
 
-const blogs = [{
-    name: "Dumbways Mobile App - 2021",
-    dateStart: new Date(),
-    dateEnd: new Date(),
-    description: "description",
-    image: "image",
-    createdAt: new Date(),
-    
-}]
+const blogs = []
     
 function addBlogger (e) {
     e.preventDefault()
     // console.log("hello")
 
     const name = document.getElementById("input-name").value
-    const dateStart = document.getElementById("input-date-start").value
-    const dateEnd = document.getElementById("input-date-end").value
+    let dateStart = document.getElementById("input-date-start").value
+    let dateEnd =  document.getElementById("input-date-end").value
+    
+    
+    dateStart = new Date(dateStart)
+    dateEnd = new Date(dateEnd)
     const description = document.getElementById("input-description").value
-    const image = document.getElementById("input-image").files
+    let image = document.getElementById("input-image").files
+
+    image = URL.createObjectURL(image[0])
+    const nodejs = document.getElementById("nodejs").checked
+    const python = document.getElementById("python").checked
+    const reactjs = document.getElementById("reactjs").checked
+    const javascript = document.getElementById("javascript").checked
+
+    // let technology = []
+    // for (let x = 0; x < technology.length; x++) {
+    //     if (technology[x].checked) {
+    //         technology.push(technology[x].value)
+    //     } 
+        
+    // }
+
+
     const createdAt = new Date()
 
-    const blog = [
+    const blog = {
         name,
         dateStart,
         dateEnd,
         description,
         image,
+        nodejs,
+        python,
+        reactjs,
+        javascript,
         createdAt
         
-
-    ]
-
+    }
+    
     blogs.unshift(blog)
     
     renderBlog()
@@ -40,25 +55,33 @@ function addBlogger (e) {
     
 
     function renderBlog() {
+        
         let html = ""
 
         for(let index = 0; index < blogs.length; index++) {
+            let technology = ""
+            if (blogs[index].nodejs) {
+                technology += `<i class="fa-brands fa-node-js"></i>`
+            } if (blogs[index].python) {
+                technology += `<i class="fa-brands fa-python"></i>`
+            } if (blogs[index].reactjs) {
+                technology += `<i class="fa-brands fa-react"></i>`
+            } if (blogs[index].javascript) {
+                technology += `<i class="fa-brands fa-js"></i>`
+            }
             html += `
             <div class="content-blogger">
                     <div class="post-card-blog">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJnDneHEkgdhzUHF5OxnQ8qGcY1dk95y8wkg&usqp=CAU" class="image-blog"/>
+                        <img src="${blogs[index].image}" class="image-blog"/>
                         <div class="text-content">
                             <h3> 
                                 <a class="name-blogger" href="bloggerWeb.html" target="_blank"> ${blogs[index].name}</a>
                             </h3>
-                            <h5>durasi : 3 bulan </h5>
-                            <p>App that used for dumbways student, it was deployed and can downloaded on playstore.
-                                Happy download
+                            <h5>durasi : ${getFullTime(blogs[index].dateStart, blogs[index].dateEnd)}</h5>
+                            <p>${blogs[index].description}</p>
                         </div>
                         <div class="icon-content">
-                            <i class="fa-brands fa-google-play"></i>
-                            <i class="fa-brands fa-android"></i>                   
-                            <i class="fa-brands fa-java"></i> 
+                            ${technology}
                         </div>
                         <div class="button-content">
                             <button class="edit-content">Edit</button>
@@ -71,47 +94,29 @@ function addBlogger (e) {
         document.getElementById("content").innerHTML = html
     }
     
-// function getFullTime() {
-//     const dateOne = new Date()
-//     const dataTwo = new Date()
-//     const time = Math.abs(dateOne-dataTwo)
-//     const days = Math.floor(time/1000*60*60*24)
-//     const month = Math.floor(days/30)
-//     const year = Math.floor(month/12)
-//     const hours = Math.floor(time/1000/60/60)
-//     const minute = Math.floor(hours/60)
-//     const second = Math.floor(minute/60)
+function getFullTime(start, end) {
+   
+    const dateOne = new Date(start)
+    const dateTwo = new Date(end)
+    const time = Math.abs(dateTwo - dateOne)
+    const days = Math.floor(time/(1000*60*60*24))
+    const month = Math.floor(time/(1000*60*60*24*30))
+    const year = Math.floor(time/(1000*60*60*24*30*12))
 
-//     let distance = []
+    let distance = []
     
-//     if (days < 24) {
-//         distance += `${days} days`
-//     } else if (month < 12) {
-//         distance += `${month} months`
-//     } else {
-//         distance += `${year} years`
-//     }
-//     console.log(distance)
-//     return distance
+    if (days < 24) {
+        distance += `${days} days`
+    } else if (month < 12) {
+        distance += `${month} months`
+    } else {
+        distance += `${year} years`
+    }
+    console.log(distance)
+    return distance
 
-
-    // // console.log(typeof d)
-    // const minute = d.getMinutes()
-    // let hour = d.getHours()
-    // const date = d.getDate()
-    // const month = d.getMonth()
-    // const year = d.getFullYear()
-
-    // if (hour < 10) {
-    //     hour = "0"+ hour
-    // }
-
-    // if (minute < 10) {
-    //     minute = "0"+ minute
-    // }
-
-    // const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
-    // return `${date} ${months[month]} ${year} ${hour}:${minute} WIB`
+}
+    
 
 
 

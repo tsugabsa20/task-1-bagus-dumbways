@@ -1,10 +1,11 @@
 .container-myProject {
-    background-color:lightgrey;
+    background-color: lightgray;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     padding-top: 20px;
+    
    
 }
 .bg-project {
@@ -12,11 +13,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    margin-bottom: 20px;
+  
 }
 .bg-project > p {
     font-size: 20px;
     font-weight: 700;
+}
+.form-project {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .form-blogger {
     display: flex;
@@ -26,6 +34,7 @@
     
 }
 .form {
+    width: 200px;
     font-size: 20px;
     font-weight: 500;
     
@@ -43,6 +52,10 @@
     gap: 10px;
     
 }
+.date-box {
+    display: flex;
+    flex-direction: column;
+}
 .box {
     display: flex;
     gap: 10px;
@@ -59,11 +72,12 @@
     
 }
 .button-myproject {
-    margin-left: 400px;
+    display: flex;
+    justify-content: flex-end;
     margin-top: 20px;
 }
 .button {
-    margin-bottom: 50px;
+    display: flex;
     border: 1px solid black;
     border-radius: 20px;
     color: black;
@@ -145,4 +159,20 @@
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    .container-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .list-blogger {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 50px;
+        margin: 50px;
+    }
+    
 }
