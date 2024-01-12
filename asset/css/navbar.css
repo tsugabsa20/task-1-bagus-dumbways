@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    width: auto;
 }
 .container-1 {
    background-color: white;
@@ -89,16 +88,9 @@
         display: block;
     }
     .hidden {
-        display: flex
+        display: block
     }
-    /* .hamberger-list {
-        display: none;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        background-color: white;
-        padding: 10px;
-    */
+  
 
 };
 
