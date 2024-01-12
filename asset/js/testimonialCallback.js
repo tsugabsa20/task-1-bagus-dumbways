@@ -2,48 +2,71 @@ const  testimonial = [
     {
     name: "Rizal Muk",
     image: "https://onemarketmedia.com/wp-content/uploads/2020/06/testimonial-video.jpg",
-    description: "yok bang semangat"
+    description: "yok bang semangat",
+    stars: 5
     },
     {
-    name: "Rizal Muk",
+    name: "Debi",
     image: "https://onemarketmedia.com/wp-content/uploads/2020/06/testimonial-video.jpg",
-    description: "yok bang semangat"
+    description: "haloo bang",
+    stars: 3
     },
     {
-    name: "Rizal Muk",
+    name: "Adnin Diba",
     image: "https://onemarketmedia.com/wp-content/uploads/2020/06/testimonial-video.jpg",
-    description: "yok bang semangat"
+    description: "bagus bang kontennya",
+    stars: 4
     },
     {
-        name: "Rizal Muk",
-        image: "https://onemarketmedia.com/wp-content/uploads/2020/06/testimonial-video.jpg",
-        description: "yok bang semangat"
+    name: "Moch. Danny",
+    image: "https://onemarketmedia.com/wp-content/uploads/2020/06/testimonial-video.jpg",
+    description: "pasti bisa bang",
+    stars: 5
     },
     {
-        name: "Rizal Muk",
-        image: "https://onemarketmedia.com/wp-content/uploads/2020/06/testimonial-video.jpg",
-        description: "yok bang semangat"
+    name: "Gustan",
+    image: "https://onemarketmedia.com/wp-content/uploads/2020/06/testimonial-video.jpg",
+    description: "yok bang semangat",
+    stars: 3
     },
     {
-        name: "Rizal Muk",
-        image: "https://onemarketmedia.com/wp-content/uploads/2020/06/testimonial-video.jpg",
-        description: "yok bang semangat"
+    name: "Evi",
+    image: "https://onemarketmedia.com/wp-content/uploads/2020/06/testimonial-video.jpg",
+    description: "yok bang semangat",
+    stars: 5
     }
     
 ]
 console.log(testimonial)
 
 
-const newTesti = testimonial.map((value) => {
-    return `
-    <div class="testimonial">
-    <img src="${value.image}" class="image-testimonial"/>
-    <p class="description">${value.description}</p>
-    <p class="author">${value.name}</p>
-    </div>`
-})
+
+
+function ratingTestimonial (stars) {
+    const filterTestimonial = testimonial.filter((value) => value.stars === stars)
+    const newTesti = filterTestimonial.map((value) => {
+        return `
+        <div class=" testimonial">
+        <img src="${value.image}" class="image-testimonial"/>
+        <p class="description">${value.description}</p>
+        <p class="author">${value.name}</p>
+        </div>`
+    })
+    document.getElementById("testimonialhtml").innerHTML = newTesti
+}
+
+function allTestimonial () {
+    const newTesti = testimonial.map((value) => {
+        return `
+        <div class=" testimonial">
+        <img src="${value.image}" class="image-testimonial"/>
+        <p class="description">${value.description}</p>
+        <p class="author">${value.name}</p>
+        </div>`
+    })
+    document.getElementById("testimonialhtml").innerHTML = newTesti
+}
+allTestimonial()
 
 
 
-
-document.getElementById("testimonialhtml").innerHTML = newTesti
